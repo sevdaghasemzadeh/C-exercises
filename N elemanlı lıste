@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int i = 1;
+int a[100];
+char devam;
+
+int main() {
+    devam = 'a';
+
+    while (devam != 'q') {
+        printf("%d. sayıyı girin\n", i);
+        scanf("%d", &a[i]);
+        i++;
+
+        printf("Devam etmek için herhangi bir tuşa bas, çıkmak için 'q' tuşuna bas\n");
+        devam = getchar();
+    }
+    return 0;
+}
