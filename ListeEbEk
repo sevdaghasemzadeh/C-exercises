@@ -1,0 +1,22 @@
+#include<stdio.h>
+
+int a[10],eb,ek,i;
+
+main()
+{
+    eb = a[0];
+    ek = a[0];
+    for (i=0; i<=9; i++){
+    printf("%d. sayıyı giriniz", i+1);
+    scanf("%d", &a[i]);
+    
+    if (eb<a[i])
+    eb = a[i];
+    
+    if (ek>a[i])
+    ek = a[i];
+    
+    }
+    printf("en büyük = %d ve en küçük = %d" , eb,ek);
+}
+
