@@ -1,0 +1,48 @@
+#include<stdio.h> 
+#include<math.h> 
+
+int a,b,tp,s;
+float ort;
+
+main()
+{
+    printf("tam bir sayı giriniz.");
+    scanf("%d", &a);
+    
+    tp=0;
+    s=0;
+    
+    while (a!=0)
+    {
+        b = a - (int)(a/10)*10;
+        tp=tp+b;
+        s++;
+        a=(int)a/10;
+        
+    }
+    
+    printf("hanelerin toplamı = %d\n", tp);
+    
+    ort = tp / s;
+    
+    printf("ort=%2.3f\n",ort);
+    
+    if( (int)ort == ort) 
+    {
+        
+       printf("tam sayıdır\n"); 
+        
+        if ((int) sqrt (ort)==sqrt (ort))
+       {
+        
+        printf("tam kare");
+        }
+        else
+        printf("tam kare değil");
+    }
+    
+    
+    else 
+    printf("tam sayı değildir");
+    
+}
