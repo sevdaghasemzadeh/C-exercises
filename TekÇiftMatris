@@ -1,0 +1,56 @@
+#include <stdio.h>
+
+void TekCiftBul (int a[20][20]);
+int i,j,k,l;
+int a[20][20];
+
+int main()
+
+{
+    printf("Matrisinizde kaç satır olsun?\n");
+    scanf("%d",&k);
+
+    printf("Matrisinizde kaç sütün olsun?\n");
+    scanf("%d" ,&l);
+    
+  for (i=0; i<k; i++)
+  {
+      for(j=0; j<l; j++)
+      {
+          printf("%d. satır %d. sütündaki sayıyı girin  ",i+1, j+1);
+          scanf("%d", &a[i][j]);
+      }
+  }
+
+for (i=0; i<k; i++)
+  {
+      for(j=0; j<l; j++)
+      {
+          printf("%d ", a[i][j]);
+          
+      }
+      
+      printf("\n");
+  }
+  
+  TekCiftBul (a);
+    return 0;
+}
+
+
+void TekCiftBul (int a[20][20])
+{
+   for (i=0; i<k; i++)
+  {
+      for(j=0; j<l; j++)
+      {
+         if( a[i][j]/2*2 == (int) a[i][j] )
+         printf("%d. satır %d. sütündaki sayı çifttir\n", i+1, j+1);
+         else 
+         printf ("%d. satır %d. sütündaki sayı tektir\n", i+1, j+1);
+          
+      }
+      
+      printf("\n");
+  } 
+}
